@@ -1,0 +1,294 @@
+/*
+Fonts Imports
+*/
+
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+/*
+Variables
+*/
+:root {
+    --container-width: 80%;
+    --container-max-width: 1700px;
+    --color100: #E0AAFF;
+    --color200: #C77DFF;
+    --color300: #9D4EDD;
+    --color400: #7B2CBF;
+    --color500: #5A189A;
+    --color600: #3C096C;
+    --color700: #240046;
+    --color800: #10002B;
+    --black: #292929;
+    --white: #f0f0f0;
+    --grey: #b3b3b3;
+    --monospace-font: "Roboto Mono", monospace;
+    --sans-serif-font: "Poppins", sans-serif;
+}
+
+/*
+Header
+*/
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color700);
+    height: 108px;
+}
+
+.header__container {
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    display: flex;
+    justify-content: space-between;
+    padding: 34px 0px 34px 0px;
+}
+
+.header__title {
+    color: var(--color100);
+    font-family: var(--monospace-font);
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__title::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--color200);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.header__title:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__menu {
+    display: flex;
+    gap: 20px;
+    color: var(--white);
+}
+
+.header__menu--sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 10;
+    background-color: #9d4edd65;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.header__menu-open-sidebar-button {
+    display: none;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    filter: invert(99%) sepia(4%) saturate(750%) hue-rotate(258deg) brightness(118%) contrast(88%)
+}
+
+.header__menu-close-sidebar-button {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.header__menu-anchor {
+    position: relative;
+    display: flex;
+    font-family: var(--monospace-font);
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__menu-anchor--sidebar {
+    width: 100%;
+}
+
+.header__menu-anchor::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--color200);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.header__menu-anchor:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.header__menu-anchor-fl {
+    color: var(--color200);
+    font-weight: bold;
+}
+
+.header__menu-button {
+    padding: 8px 18px 8px 18px;
+    background-color: transparent;
+    border: var(--color300) solid 2px;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 16px;
+    font-family: var(--monospace-font);
+    display: flex;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.header__menu-button:hover {
+    background-color: var(--color500);
+    box-shadow: var(--color400) 0px 0px 40px 0px;
+}
+
+/*
+Introduction
+*/
+.introduction {
+    position: relative;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.introduction__container {
+    position: absolute;
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    display: flex;
+    align-items: center;
+}
+
+.introduction__text-container {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.introduction__text-initial {
+    font-family: var(--monospace-font);
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--color100);
+    margin-bottom: 20px;
+}
+
+.introduction__text-name {
+    display: inline-block;
+    font-family: var(--sans-serif-font);
+    font-weight: 700;
+    color: var(--white);
+    font-size: 6vw;
+}
+
+.introduction__text-occupation {
+    display: inline-block;
+    font-family: var(--sans-serif-font);
+    font-weight: 700;
+    color: var(--grey);
+    font-size: 5vw;
+    margin-bottom: 20px;
+}
+
+.introduction__text-description {
+    display: inline-block;
+    font-family: var(--sans-serif-font);
+    font-weight: 400;
+    color: var(--grey);
+    font-size: 18px;
+    max-width: 40%;
+    margin-bottom: 30px;
+}
+
+.introduction__button-call-to-action {
+    padding: 8px 18px 8px 18px;
+    background-color: var(--color700);
+    border: var(--color300) solid 2px;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 16px;
+    font-family: var(--monospace-font);
+    display: flex;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.introduction__button-call-to-action:hover {
+    background-color: var(--color500);
+    box-shadow: var(--color400) 0px 0px 40px 0px;
+}
+
+/* Large devices */
+@media (max-width: 1200px) {
+
+}
+
+/* Smaller desktop */
+@media (max-width: 902px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header__menu-open-sidebar-button {
+        display: block;
+    }
+}
+
+/* Most tablets */
+@media (max-width: 768px) {
+
+}
+
+/* Most phones and small devices */
+@media (max-width: 480px) {
+
+}
+
+/* Smaller phones */
+@media (max-width: 330px) {
+    .header__menu--sidebar {
+        width: 100%;
+    }
+}
