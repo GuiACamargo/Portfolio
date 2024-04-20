@@ -8,7 +8,7 @@ Fonts Imports
 Variables
 */
 :root {
-    --header-height: 108px;
+    --header-height: 78px;
     --container-width: 80%;
     --container-max-width: 1700px;
     --color100: #E0AAFF;
@@ -24,6 +24,10 @@ Variables
     --grey: #b3b3b3;
     --monospace-font: "Roboto Mono", monospace;
     --sans-serif-font: "Poppins", sans-serif;
+}
+
+* {
+    scroll-behavior: smooth;
 }
 
 /*
@@ -95,7 +99,7 @@ Header
     position: fixed;
     top: var(--header-height);
     right: 0;
-    transform: translateX(250px);
+    transform: translateX(500px);
     height: calc(100vh - var(--header-height));
     width: 250px;
     z-index: 20;
@@ -312,6 +316,162 @@ Introduction
     box-shadow: var(--color400) 0px 0px 40px 0px;
 }
 
+.introduction__button-call-to-action:visited {
+    color: var(--white);
+}
+
+/* About me */
+.about-me {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    padding: 70px 0px;
+}
+
+.about-me__container {
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-me__title-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-me__title {
+    font-family: var(--sans-serif-font);
+    font-size: 44px;
+    color: var(--color500);
+}
+
+.about-me__title-divider {
+    width: 50px;
+    height: 8px;
+    background-color: var(--color700);
+    border-radius: 5px;
+}
+
+.about-me__description {
+    margin-top: 10px;
+    font-family: var(--monospace-font);
+    font-size: 16px;
+}
+
+.about-me__about-skills-container {
+    display: flex;
+    gap: 80px;
+}
+
+.about-me__about {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.about-me__about-title {
+    font-family: var(--monospace-font);
+    font-size: 28px;
+    color: var(--color500);
+}
+
+.about-me__about-description {
+    font-family: var(--sans-serif-font);
+}
+
+.colorful-text {
+    font-size: 18px;
+    background: linear-gradient(
+        to right, 
+        var(--color100), 
+        var(--color400), 
+        var(--color700), 
+        var(--color400), 
+        var(--color100));
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: move-bg 4s infinite linear;
+}
+
+.about-me__skills {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.about-me__skills-title {
+    font-family: var(--monospace-font);
+    font-size: 28px;
+    color: var(--color500);
+}
+
+.about-me__skills-itens-container {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--color700);
+}
+
+.about-me__skills-itens-ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.about-me__skills-skill {
+    font-family: var(--sans-serif-font);
+    color: var(--white);
+    padding: 7px;
+    background-color: var(--color600);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.about-me__skills-skill:hover {
+   transform: scale(1.1);
+}
+
+@keyframes move-bg {
+    to {
+      background-position: 400% 0;
+    }
+}
+
+.purple-text {
+    color: var(--color500);
+}
+
+.about-me__button-call-to-action {
+    padding: 8px 18px 8px 18px;
+    background-color: var(--color700);
+    border: var(--color300) solid 2px;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 16px;
+    font-family: var(--monospace-font);
+    display: flex;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.about-me__button-call-to-action:hover {
+    background-color: var(--color500);
+    box-shadow: var(--color400) 0px 0px 40px 0px;
+}
+
 /* Large devices */
 @media (max-width: 1200px) {
     .introduction {
@@ -364,6 +524,10 @@ Introduction
     .header__menu-sidebar-button {
         display: flex;
     }
+
+    .about-me__title {
+        font-size: 36px;
+    }
 }
 
 /* Most tablets */
@@ -387,6 +551,24 @@ Introduction
     .introduction__button-call-to-action {
         font-size: 14px;
     }
+
+    .about-me__about-skills-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .about-me__about {
+        max-width: 100%;
+    }
+    
+    .about-me__skills {
+        max-width: 100%;
+    }
+
+    .about-me__title {
+        font-size: 32px;
+    }
 }
 
 /* Most phones and small devices */
@@ -394,10 +576,18 @@ Introduction
     .introduction__text-description {
         max-width: 80%;
     }
+
+    .about-me__title {
+        font-size: 28px;
+    }
 }
 
 /* Smaller phones */
 @media (max-width: 330px) {
+    .introduction {
+        height: 600px;
+    }
+
     .header__menu--sidebar {
         width: 100%;
     }
