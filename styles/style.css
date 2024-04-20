@@ -320,6 +320,10 @@ Introduction
     color: var(--white);
 }
 
+.introduction__button-call-to-action:active {
+    color: var(--white);
+}
+
 /* About me */
 .about-me {
     width: 100%;
@@ -472,6 +476,102 @@ Introduction
     box-shadow: var(--color400) 0px 0px 40px 0px;
 }
 
+/*
+Experience/Work
+*/
+
+.experience-education {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color700);
+    padding: 70px 0px;
+}
+
+.experience-education__container {
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.experience-education__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 70%;
+}
+
+.experience-education__group {
+    display: flex;
+    gap: 50px;
+}
+
+.experience-education__title-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.experience-education__title {
+    font-family: var(--monospace-font);
+    color: var(--color100);
+}
+
+.experience-education__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience-education__item-title-wrapper {
+    display: flex;
+}
+
+.experience-education__item-title {
+    font-family: var(--sans-serif-font);
+    color: var(--color100);
+    font-size: 20px;
+}
+
+.experience-education__icon {
+    margin-right: 10px;
+}
+
+.experience-education__icon--mtop {
+    margin-top: 3px;
+}
+
+.experience-education__item-subtitle {
+    font-family: var(--sans-serif-font);
+    color: var(--grey);
+    font-size: 16px;
+}
+
+.experience-education__item-description {
+    margin-top: 10px;
+}
+
+.experience-education__item-description-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.experience-education__item-description-item {
+    color: var(--white);
+    font-family: var(--sans-serif-font);
+    font-size: 16px;
+}
+
+.experience-education__divider {
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
 /* Large devices */
 @media (max-width: 1200px) {
     .introduction {
@@ -492,6 +592,14 @@ Introduction
 
     .introduction__text-occupation {
         font-size: 38px;
+    }
+    
+    .experience-education__container {
+        flex-direction: column;
+    }
+
+    .experience-education__wrapper {
+        max-width: 100%;
     }
 }
 
@@ -527,6 +635,19 @@ Introduction
 
     .about-me__title {
         font-size: 36px;
+    }
+
+    .experience-education__group {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .experience-education__title {
+        font-size: 28px;
+    }
+
+    .experience-education__icon--mtop {
+        margin-top: 6px;
     }
 }
 
@@ -579,6 +700,18 @@ Introduction
 
     .about-me__title {
         font-size: 28px;
+    }
+
+    .experience-education__title {
+        font-size: 24px;
+    }
+
+    .experience-education__item-title {
+        font-size: 18px;
+    }
+
+    .experience-education__item-subtitle {
+        font-size: 14px;
     }
 }
 
