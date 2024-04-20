@@ -1,6 +1,16 @@
-import { loadAll } from "@tsparticles/all";
+
+import { loadBasic } from "@tsparticles/basic";
 import { confetti } from "@tsparticles/confetti";
 import { tsParticles } from "@tsparticles/engine";
+import { loadExternalBounceInteraction } from "@tsparticles/interaction-external-bounce";
+import { loadExternalConnectInteraction } from "@tsparticles/interaction-external-connect";
+import { loadExternalPushInteraction } from "@tsparticles/interaction-external-push";
+import { loadExternalRepulseInteraction } from "@tsparticles/interaction-external-repulse";
+import { loadParticlesLinksInteraction } from "@tsparticles/interaction-particles-links";
+import { loadParticlesRepulseInteraction } from "@tsparticles/interaction-particles-repulse";
+import { loadParallaxMover } from "@tsparticles/move-parallax";
+import { loadEasingCubicPlugin } from "@tsparticles/plugin-easing-cubic";
+import { loadEasingQuadPlugin } from "@tsparticles/plugin-easing-quad";
 
 const buttonCallToAction = document.querySelector(".introduction__button-call-to-action")
 const buttonSidebar = document.querySelector(".header__menu-sidebar-button")
@@ -10,13 +20,22 @@ const overlay = document.querySelector(".overlay")
 
 let isSidebarOpen = false
 
-async function loadParticles() {
-    await loadAll(tsParticles)
-  
+async function loadParticles() { 
+    loadBasic(tsParticles)
+    loadEasingCubicPlugin(tsParticles)
+    loadEasingQuadPlugin(tsParticles)
+    loadExternalBounceInteraction(tsParticles)
+    loadExternalConnectInteraction(tsParticles)
+    loadExternalPushInteraction(tsParticles)
+    loadExternalRepulseInteraction(tsParticles)
+    loadParticlesRepulseInteraction(tsParticles)
+    loadParticlesLinksInteraction(tsParticles)
+    loadParallaxMover(tsParticles)
+
     await tsParticles.load({
         id: "tsparticles",
         url: "./assets/presets/default.json"
-    }).catch(error => console.log(error));
+    }).then("done").catch(error => console.log(error));
 }
 
 loadParticles()
