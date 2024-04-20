@@ -34,7 +34,7 @@ async function loadParticles() {
 
     await tsParticles.load({
         id: "tsparticles",
-        url: "./assets/presets/default.json"
+        url: "default.json"
     }).then("done").catch(error => console.log(error));
 }
 
