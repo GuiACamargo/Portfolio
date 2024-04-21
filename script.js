@@ -249,24 +249,24 @@ const tick = () =>
 
 tick()
 
-async function loadParticles() { 
-    loadBasic(tsParticles)
-    loadEasingCubicPlugin(tsParticles)
-    loadEasingQuadPlugin(tsParticles)
-    loadExternalBounceInteraction(tsParticles)
-    loadExternalConnectInteraction(tsParticles)
-    loadExternalPushInteraction(tsParticles)
-    loadExternalRepulseInteraction(tsParticles)
-    loadParticlesRepulseInteraction(tsParticles)
-    loadParticlesLinksInteraction(tsParticles)
-    loadParallaxMover(tsParticles)
+// async function loadParticles() { 
+//     loadBasic(tsParticles)
+//     loadEasingCubicPlugin(tsParticles)
+//     loadEasingQuadPlugin(tsParticles)
+//     loadExternalBounceInteraction(tsParticles)
+//     loadExternalConnectInteraction(tsParticles)
+//     loadExternalPushInteraction(tsParticles)
+//     loadExternalRepulseInteraction(tsParticles)
+//     loadParticlesRepulseInteraction(tsParticles)
+//     loadParticlesLinksInteraction(tsParticles)
+//     loadParallaxMover(tsParticles)
 
-    await tsParticles.load({
-        id: "tsparticles",
-        url: "/presets/default.json"
-    }).then(() => {
-        launchConfetti(0, 0, 200, 100)
-    }).catch(error => console.log(error));
-}
+//     await tsParticles.load({
+//         id: "tsparticles",
+//         url: "/presets/default.json"
+//     }).then(() => {
+//         launchConfetti(0, 0, 200, 100)
+//     }).catch(error => console.log(error));
+// }
 
-loadParticles()
+// loadParticles()
