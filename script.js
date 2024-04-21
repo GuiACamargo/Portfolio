@@ -117,7 +117,7 @@ scene.background = new THREE.Color("#3C096C")
 
 const gltfLoader = new GLTFLoader()
 
-let gltfModel = null
+let gltfModel = null;
 
 gltfLoader.load(
     './assets/3DModel/glitch_bust/scene.gltf',
