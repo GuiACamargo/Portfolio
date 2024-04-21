@@ -120,7 +120,7 @@ const gltfLoader = new GLTFLoader()
 let gltfModel = null
 
 gltfLoader.load(
-    '/assets/3DModel/glitch_bust/scene.gltf',
+    './assets/3DModel/glitch_bust/scene.gltf',
     (gltf) => {
         gltfModel = gltf.scene.children[0]
         gltfModel.scale.set(0.015, 0.015, 0.015)
@@ -210,8 +210,8 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 const ambientLight = new THREE.AmbientLight(0xffffff, 8)
 scene.add(ambientLight)
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 25)
-const directionalLightBack = new THREE.DirectionalLight(0xffffff, 25)
+const directionalLight = new THREE.DirectionalLight(0xffffff, 20)
+const directionalLightBack = new THREE.DirectionalLight(0xffffff, 20)
 
 directionalLight.position.set(5, 2, 0)
 directionalLight.lookAt(0, 2, 0)
