@@ -7,21 +7,15 @@
         "opacity": 1
     },
     "clear": true,
-    "delay": 0,
     "fullScreen": {
         "enable": false,
         "zIndex": 1
     },
     "detectRetina": true,
-    "duration": 0,
     "fpsLimit": 120,
     "interactivity": {
         "detectsOn": "window",
         "events": {
-            "onClick": {
-                "enable": false,
-                "mode": "push"
-            },
             "onHover": {
                 "enable": true,
                 "mode": "repulse",
@@ -37,21 +31,6 @@
             }
         },
         "modes": {
-            "bounce": {
-                "distance": 200
-            },
-            "connect": {
-                "distance": 80,
-                "links": {
-                    "opacity": 0.5
-                },
-                "radius": 60
-            },
-            "push": {
-                "default": true,
-                "groups": [],
-                "quantity": 3
-            },
             "repulse": {
                 "distance": 175,
                 "duration": 0.4,
@@ -65,7 +44,7 @@
                     "factor": 100,
                     "speed": 1,
                     "maxSpeed": 50,
-                    "easing": "ease-out-quad",
+                    "easing": "ease-out-cubic",
                     "selectors": []
                 }
             },
@@ -76,34 +55,6 @@
         }
     },
     "particles": {
-        "bounce": {
-            "horizontal": {
-                "value": 1
-            },
-            "vertical": {
-                "value": 1
-            }
-        },
-        "collisions": {
-            "absorb": {
-                "speed": 2
-            },
-            "bounce": {
-                "horizontal": {
-                    "value": 1
-                },
-                "vertical": {
-                    "value": 1
-                }
-            },
-            "enable": false,
-            "maxSpeed": 50,
-            "mode": "bounce",
-            "overlap": {
-                "enable": true,
-                "retries": 0
-            }
-        },
         "color": {
             "value": "#e3e3e3",
             "animation": {
@@ -138,9 +89,7 @@
         },
         "effect": {
             "close": true,
-            "fill": true,
-            "options": {},
-            "type": []
+            "fill": true
         },
         "move": {
             "angle": {

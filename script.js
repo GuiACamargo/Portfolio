@@ -2,15 +2,11 @@
 import { loadBasic } from "@tsparticles/basic";
 import { confetti } from "@tsparticles/confetti";
 import { tsParticles } from "@tsparticles/engine";
-import { loadExternalBounceInteraction } from "@tsparticles/interaction-external-bounce";
-import { loadExternalConnectInteraction } from "@tsparticles/interaction-external-connect";
-import { loadExternalPushInteraction } from "@tsparticles/interaction-external-push";
 import { loadExternalRepulseInteraction } from "@tsparticles/interaction-external-repulse";
 import { loadParticlesLinksInteraction } from "@tsparticles/interaction-particles-links";
 import { loadParticlesRepulseInteraction } from "@tsparticles/interaction-particles-repulse";
 import { loadParallaxMover } from "@tsparticles/move-parallax";
 import { loadEasingCubicPlugin } from "@tsparticles/plugin-easing-cubic";
-import { loadEasingQuadPlugin } from "@tsparticles/plugin-easing-quad";
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
@@ -249,24 +245,20 @@ const tick = () =>
 
 tick()
 
-// async function loadParticles() { 
-//     loadBasic(tsParticles)
-//     loadEasingCubicPlugin(tsParticles)
-//     loadEasingQuadPlugin(tsParticles)
-//     loadExternalBounceInteraction(tsParticles)
-//     loadExternalConnectInteraction(tsParticles)
-//     loadExternalPushInteraction(tsParticles)
-//     loadExternalRepulseInteraction(tsParticles)
-//     loadParticlesRepulseInteraction(tsParticles)
-//     loadParticlesLinksInteraction(tsParticles)
-//     loadParallaxMover(tsParticles)
+async function loadParticles() { 
+    loadBasic(tsParticles)
+    loadEasingCubicPlugin(tsParticles)
+    loadExternalRepulseInteraction(tsParticles)
+    loadParticlesRepulseInteraction(tsParticles)
+    loadParticlesLinksInteraction(tsParticles)
+    loadParallaxMover(tsParticles)
 
-//     await tsParticles.load({
-//         id: "tsparticles",
-//         url: "/presets/default.json"
-//     }).then(() => {
-//         launchConfetti(0, 0, 200, 100)
-//     }).catch(error => console.log(error));
-// }
+    await tsParticles.load({
+        id: "tsparticles",
+        url: "/presets/default.json"
+    }).then(() => {
+        launchConfetti(0, 0, 200, 100)
+    }).catch(error => console.log(error));
+}
 
-// loadParticles()
+loadParticles()
