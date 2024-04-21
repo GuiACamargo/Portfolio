@@ -779,6 +779,90 @@ Sandbox
     text-align: center;
 }
 
+/*
+Contact
+*/
+
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color700);
+    padding: 70px 0px;
+}
+
+.contact__container {
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.contact__list-container {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact__list-title {
+    color: var(--color100);
+    font-family: var(--monospace-font);
+    font-size: 36px;
+}
+
+.contact__list-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact__list-item-anchor {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--white);
+    border: 2px solid var(--color300);
+    color: var(--black);
+    transition: 0.3s;
+    word-break: break-all;
+}
+
+.contact__list-item-anchor:hover {
+    transform: scale(1.03);
+    box-shadow: var(--color100) 0px 0px 30px 0px;
+}
+
+.contact__list-item-anchor:visited {
+    color: var(--black);
+}
+
+.contact__list-item-anchor:active {
+    color: var(--black);
+}
+
+.contact__list-item-name {
+    font-family: var(--sans-serif-font);
+    font-size: 16px;
+}
+
+.contact__spotify {
+    padding: 10px;
+    background-color: var(--color100);
+    border-radius: 10px;
+    width: 40%;
+}
+
+.contact__spotify-iframe {
+    border-radius: 1px;
+    border: none;
+}
+
 /* Large devices */
 @media (max-width: 1200px) {
     .introduction {
@@ -813,6 +897,10 @@ Sandbox
         width: 60%;
         height: 100%;
         max-height: 700px;
+    }
+
+    .contact__spotify {
+        width: 55%;
     }
 }
 
@@ -862,6 +950,21 @@ Sandbox
     .experience-education__icon--mtop {
         margin-top: 6px;
     }
+
+    .contact__list-container {
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact__spotify {
+        max-width: 100%;
+    }
 }
 
 /* Most tablets */
@@ -903,6 +1006,10 @@ Sandbox
     .about-me__title, .sandbox__title {
         font-size: 32px;
     }
+
+    .contact__spotify {
+        width: 80%;
+    }
 }
 
 /* Most phones and small devices */
@@ -930,6 +1037,10 @@ Sandbox
 
     .experience-education__item-subtitle {
         font-size: 14px;
+    }
+
+    .contact__spotify {
+        width: 100%;
     }
 }
 
