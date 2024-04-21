@@ -494,6 +494,7 @@ Experience/Work
     max-width: var(--container-max-width);
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 50px;
 }
 
@@ -572,6 +573,15 @@ Experience/Work
     border-radius: 5px;
 }
 
+.experience__three-js {
+    width: 20vw;
+    height: 70vh;
+    max-width: 500px;
+    max-height: 600px;
+    border-radius: 10px;
+    cursor: grab;
+}
+
 /* Large devices */
 @media (max-width: 1200px) {
     .introduction {
@@ -600,6 +610,12 @@ Experience/Work
 
     .experience-education__wrapper {
         max-width: 100%;
+    }
+
+    .experience__three-js {
+        width: 60%;
+        height: 100%;
+        max-height: 700px;
     }
 }
 

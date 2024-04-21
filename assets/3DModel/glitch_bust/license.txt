@@ -1,0 +1,11 @@
+Model Information:
+* title:	Glitch Bust
+* source:	https://sketchfab.com/3d-models/glitch-bust-fc304fa242504070b69061abe99dbff0
+* author:	timofei_kojevnikov (https://sketchfab.com/timofei_kojevnikov)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Glitch Bust" (https://sketchfab.com/3d-models/glitch-bust-fc304fa242504070b69061abe99dbff0) by timofei_kojevnikov (https://sketchfab.com/timofei_kojevnikov) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
