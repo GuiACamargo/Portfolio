@@ -177,6 +177,10 @@ Header
     color: var(--white);
 }
 
+.header__menu-anchor:-webkit-any-link {
+    color: var(--white);
+}
+
 .header__menu-anchor--sidebar {
     padding-bottom: 5px;
 }
