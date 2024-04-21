@@ -120,7 +120,7 @@ const gltfLoader = new GLTFLoader()
 let gltfModel = null;
 
 gltfLoader.load(
-    './public/3DModel/glitch_bust/scene.gltf',
+    '/3DModel/glitch_bust/scene.gltf',
     (gltf) => {
         gltfModel = gltf.scene.children[0]
         gltfModel.scale.set(0.015, 0.015, 0.015)
@@ -263,7 +263,7 @@ async function loadParticles() {
 
     await tsParticles.load({
         id: "tsparticles",
-        url: "./public/presets/default.json"
+        url: "/presets/default.json"
     }).then(() => {
         launchConfetti(0, 0, 200, 100)
     }).catch(error => console.log(error));
