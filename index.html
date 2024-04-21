@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="script.js" defer></script>
+    <script type="module" src="threejsscript.js" defer></script>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/x-icon" href="icons/code.svg">
     <title>Portfolio - Gui Camargo</title>
     <meta name="description" content="Guilherme Camargo is a Full-Stack Developer with real international project experience, see more about it!">
     <meta property="og:title" content="Portfolio - Gui Camargo" />
+    <meta property="og:description" content="Guilherme Camargo is a Full-Stack Developer with real international project experience, see more about it!" />
     <meta property="og:type" content="website" />
     <!-- <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" /> -->
     <meta property="og:image" content="https://media.istockphoto.com/id/1047259374/photo/programming-source-code-abstract-background.jpg?s=612x612&w=0&k=20&c=07DAFiujCb58Zgu5ZArLprHiSKew5pCGqbTnop9GclA=" />
@@ -71,6 +73,13 @@
         <button class="header__menu-button">Resume</button>
     </menu>
     <main>
+        <div class="toast">
+            <div class="toast__title-container">
+                <img class="toast__icon" src="icons/alert.svg" alt="Alert Icon">
+                <h3 class="toast__title">Please wait :)</h3>
+            </div>
+            <p class="toast__description">Particles and 3D Models loading...</p>
+        </div>
         <div class="overlay"></div>
         <article class="introduction" id="introduction">
             <div id="tsparticles"></div>
