@@ -107,11 +107,11 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 8)
+const ambientLight = new THREE.AmbientLight(0xffffff, 1)
 scene.add(ambientLight)
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 20)
-const directionalLightBack = new THREE.DirectionalLight(0xffffff, 20)
+const directionalLight = new THREE.DirectionalLight(0xC77DFF, 10)
+const directionalLightBack = new THREE.DirectionalLight(0xffffff, 10)
 
 directionalLight.position.set(5, 2, 0)
 directionalLight.lookAt(0, 2, 0)
