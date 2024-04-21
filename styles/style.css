@@ -173,6 +173,10 @@ Header
     color: var(--white);
 }
 
+.header__menu-anchor:focus {
+    color: var(--white);
+}
+
 .header__menu-anchor--sidebar {
     padding-bottom: 5px;
 }
