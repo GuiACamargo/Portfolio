@@ -422,6 +422,7 @@ Introduction
     margin-top: 10px;
     font-family: var(--monospace-font);
     font-size: 16px;
+    text-align: center;
 }
 
 .about-me__about-skills-container {
@@ -637,6 +638,147 @@ Experience/Work
     cursor: grab;
 }
 
+/*
+Sandbox
+*/
+.sandbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    padding: 70px 0px;
+}
+
+.sandbox__container {
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.sandbox__title-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sandbox__title {
+    font-family: var(--sans-serif-font);
+    font-size: 44px;
+    color: var(--color500);
+    text-align: center;
+}
+
+.sandbox__title-divider {
+    width: 50px;
+    height: 8px;
+    background-color: var(--color700);
+    border-radius: 5px;
+}
+
+.sandbox__description {
+    margin-top: 10px;
+    font-family: var(--monospace-font);
+    font-size: 16px;
+    text-align: center;
+}
+
+.sandbox__projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sandbox__projects-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.sandbox__projects-item {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: var(--color600);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sandbox__projects-item-title {
+    font-family: var(--monospace-font);
+    color: var(--white);
+    text-align: center;
+}
+
+.sandbox__projects-item-img {
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+.sandbox__projects-item-button {
+    padding: 8px 18px 8px 18px;
+    background-color: var(--color700);
+    border: var(--color300) solid 2px;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 16px;
+    font-family: var(--monospace-font);
+    display: flex;
+    transition: 0.3s;
+    cursor: pointer;
+    align-self: center;
+}
+
+.sandbox__projects-item-button:hover {
+    background-color: var(--color500);
+    box-shadow: var(--color400) 0px 0px 40px 0px;
+}
+
+.sandbox__projects-item-button:visited {
+    color: var(--white);
+}
+
+.sandbox__projects-item-button:active {
+    color: var(--white);
+}
+
+.sandbox__github {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: var(--color500);
+    margin: auto;
+    transition: 0.3s;
+    align-items: center;
+}
+
+.sandbox__github:hover {
+    background-color: var(--color300);
+    box-shadow: var(--color400) 0px 0px 40px 0px;
+    transform: scale(1.02);
+}
+
+.sandbox__github:visited {
+    color: var(--white);
+}
+
+.sandbox__github:active {
+    color: var(--white);
+}
+
+.sandbox__github-description {
+    font-family: var(--monospace-font);
+    text-align: center;
+}
+
 /* Large devices */
 @media (max-width: 1200px) {
     .introduction {
@@ -704,7 +846,7 @@ Experience/Work
         display: flex;
     }
 
-    .about-me__title {
+    .about-me__title, .sandbox__title {
         font-size: 36px;
     }
 
@@ -758,7 +900,7 @@ Experience/Work
         max-width: 100%;
     }
 
-    .about-me__title {
+    .about-me__title, .sandbox__title {
         font-size: 32px;
     }
 }
