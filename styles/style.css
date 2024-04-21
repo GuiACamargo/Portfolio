@@ -65,6 +65,10 @@ Header
     position: relative;
 }
 
+.header__title:visited {
+    color: var(--color100);
+}
+
 .header__title::before {
     content: '';
     position: absolute;
@@ -163,6 +167,10 @@ Header
     font-family: var(--monospace-font);
     align-items: center;
     cursor: pointer;
+}
+
+.header__menu-anchor:visited {
+    color: var(--white);
 }
 
 .header__menu-anchor--sidebar {
