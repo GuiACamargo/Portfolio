@@ -427,7 +427,7 @@ Introduction
 
 .about-me__about-skills-container {
     display: flex;
-    gap: 80px;
+    gap: 154px;
 }
 
 .about-me__about {
@@ -698,14 +698,14 @@ Sandbox
 .sandbox__projects-container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 80px;
 }
 
 .sandbox__projects-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 100px;
 }
 
 .sandbox__projects-item {
