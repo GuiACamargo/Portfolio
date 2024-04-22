@@ -394,7 +394,7 @@ Introduction
     max-width: var(--container-max-width);
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 80px;
 }
 
 .about-me__title-container {
@@ -532,6 +532,14 @@ Introduction
     box-shadow: var(--color400) 0px 0px 40px 0px;
 }
 
+.about-me__button-call-to-action:active {
+    color: var(--white);
+}
+
+.about-me__button-call-to-action:visited {
+    color: var(--white);
+}
+
 /*
 Experience/Work
 */
@@ -655,7 +663,7 @@ Sandbox
     max-width: var(--container-max-width);
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 80px;
 }
 
 .sandbox__title-container {
