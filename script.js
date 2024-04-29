@@ -93,6 +93,10 @@ overlay.addEventListener('click', () => {
     }
 })
 
+window.addEventListener('DOMContentLoaded', () => {
+    launchConfetti(0, 0, 200, 100)
+})
+
 async function loadParticles() {
     toast.classList.add("toast--animation")
     loadBasic(tsParticles)
@@ -108,7 +112,6 @@ async function loadParticles() {
     }).then(() => {
         toast.classList.remove("toast--animation")
     }).catch(error => console.log(error));
-    launchConfetti(0, 0, 200, 100)
 }
 
 loadParticles()
