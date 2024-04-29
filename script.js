@@ -106,9 +106,9 @@ async function loadParticles() {
         id: "tsparticles",
         url: "/presets/default.json"
     }).then(() => {
-        launchConfetti(0, 0, 200, 100)
         toast.classList.remove("toast--animation")
     }).catch(error => console.log(error));
+    launchConfetti(0, 0, 200, 100)
 }
 
 loadParticles()
