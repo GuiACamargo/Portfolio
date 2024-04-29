@@ -917,6 +917,10 @@ Footer
     color: var(--grey);
 }
 
+.footer__anchor:-webkit-any-link {
+    color: var(--grey);
+}
+
 /* Large devices */
 @media (max-width: 1200px) {
     .introduction {
