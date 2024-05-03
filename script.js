@@ -93,23 +93,22 @@ overlay.addEventListener('click', () => {
     }
 })
 
-// window.addEventListener('DOMContentLoaded', () => {
-// })
+window.addEventListener('DOMContentLoaded', () => {
+    launchConfetti(0, 0, 200, 100)
+})
 
 async function loadParticles() {
-    toast.classList.add("toast--animation")
     loadBasic(tsParticles)
     loadEasingCubicPlugin(tsParticles)
     loadExternalRepulseInteraction(tsParticles)
     loadParticlesRepulseInteraction(tsParticles)
     loadParticlesLinksInteraction(tsParticles)
     loadParallaxMover(tsParticles)
-    
+
     await tsParticles.load({
         id: "tsparticles",
         url: "/presets/default.json"
     }).then(() => {
-        launchConfetti(0, 0, 200, 100)
         toast.classList.remove("toast--animation")
     }).catch(error => console.log(error));
 }
