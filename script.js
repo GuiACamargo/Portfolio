@@ -104,12 +104,12 @@ async function loadParticles() {
     loadParticlesRepulseInteraction(tsParticles)
     loadParticlesLinksInteraction(tsParticles)
     loadParallaxMover(tsParticles)
-    launchConfetti(0, 0, 200, 100)
-
+    
     await tsParticles.load({
         id: "tsparticles",
         url: "/presets/default.json"
     }).then(() => {
+        launchConfetti(0, 0, 200, 100)
         toast.classList.remove("toast--animation")
     }).catch(error => console.log(error));
 }
