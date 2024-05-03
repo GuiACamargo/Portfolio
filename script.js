@@ -93,9 +93,8 @@ overlay.addEventListener('click', () => {
     }
 })
 
-window.addEventListener('DOMContentLoaded', () => {
-    launchConfetti(0, 0, 200, 100)
-})
+// window.addEventListener('DOMContentLoaded', () => {
+// })
 
 async function loadParticles() {
     toast.classList.add("toast--animation")
@@ -105,6 +104,7 @@ async function loadParticles() {
     loadParticlesRepulseInteraction(tsParticles)
     loadParticlesLinksInteraction(tsParticles)
     loadParallaxMover(tsParticles)
+    launchConfetti(0, 0, 200, 100)
 
     await tsParticles.load({
         id: "tsparticles",
