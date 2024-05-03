@@ -57,7 +57,6 @@ media.addEventListener('change', () => {
 
 window.addEventListener('resize', () =>
 {
-    console.log(isMatchingMedia)
     if(isMatchingMedia){
         threeJSCanvas.style.width = "60%"
         threeJSCanvas.style.height = "30vh"
