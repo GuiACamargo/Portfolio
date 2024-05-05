@@ -111,7 +111,7 @@ Header
     height: calc(100vh - var(--header-height));
     width: 250px;
     z-index: 20;
-    background-color: #9d4edd65;
+    background-color: #9d4eddb2;
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -563,7 +563,6 @@ Experience/Work
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 50px;
 }
 
 .experience-education__wrapper {
@@ -571,6 +570,8 @@ Experience/Work
     flex-direction: column;
     gap: 50px;
     max-width: 70%;
+    margin-right: 200px;
+
 }
 
 .experience-education__group {
@@ -639,6 +640,15 @@ Experience/Work
     height: 3px;
     background-color: var(--white);
     border-radius: 5px;
+}
+
+.experience__three-js-title {
+    color: var(--grey);
+    text-align: center;
+    font-family: var(--monospace-font);
+    margin-bottom: 5px;
+    writing-mode: vertical-rl;
+    margin-left: 5px;
 }
 
 .experience__three-js {
@@ -901,16 +911,67 @@ Contact
     font-size: 16px;
 }
 
-.contact__spotify {
-    padding: 10px;
-    background-color: var(--color100);
+.contact__buttons {
+    padding: 20px;
+    background-image: radial-gradient(
+        to right top, 
+        var(--color700), 
+        var(--color600), 
+        var(--color500), 
+        var(--color400), 
+        var(--color300)
+    );
     border-radius: 10px;
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
-.contact__spotify-iframe {
-    border-radius: 1px;
-    border: none;
+.contact__buttons-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.contact__buttons-title {
+    margin-top: 5px;
+    font-family: var(--monospace-font);
+    color: var(--white);
+    font-size: 23px;
+    text-align: center;
+}
+
+.contact__buttons-sub-title {
+    color: var(--grey);
+    font-family: var(--sans-serif-font);
+    font-size: 14px;
+    text-align: center;
+}
+
+.contact__buttons-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__button {
+    border-radius: 50%;
+    border: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: var(--white);
+    transition: 0.3s;
+}
+
+.contact__button:hover {
+    background-color: var(--color700);
 }
 
 /*
@@ -990,6 +1051,15 @@ Footer
 
     .experience-education__wrapper {
         max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .experience__three-js-title {
+        writing-mode: horizontal-tb;
+        font-size: 14px;
+        margin-left: 0px;
+        margin-top: 5px;
     }
 
     .experience__three-js {
@@ -1065,8 +1135,8 @@ Footer
         align-items: center;
     }
 
-    .contact__spotify {
-        max-width: 100%;
+    .contact__buttons {
+        width: 60%;
     }
 }
 
@@ -1110,7 +1180,7 @@ Footer
         font-size: 32px;
     }
 
-    .contact__spotify {
+    .contact__buttons {
         width: 80%;
     }
 }
@@ -1142,7 +1212,7 @@ Footer
         font-size: 14px;
     }
 
-    .contact__spotify {
+    .contact__buttons {
         width: 100%;
     }
 }
