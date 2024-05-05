@@ -913,8 +913,8 @@ Contact
 
 .contact__buttons {
     padding: 20px;
-    background-image: radial-gradient(
-        circle, 
+    background-image: linear-gradient(
+        top right, 
         var(--color700), 
         var(--color600), 
         var(--color500), 
