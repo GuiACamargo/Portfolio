@@ -914,7 +914,7 @@ Contact
 .contact__buttons {
     padding: 20px;
     background-image: radial-gradient(
-        to right top, 
+        circle, 
         var(--color700), 
         var(--color600), 
         var(--color500), 
