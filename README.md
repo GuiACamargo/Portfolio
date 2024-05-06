@@ -7,7 +7,7 @@ npm run dev
 ```
 After that it should be available on https://localhost:5173
 
-# Tecnologies used 👨‍💻
+# Technologies used 👨‍💻
 - Vite
 - HTML, CSS, JS
 - [ts.particles](https://particles.js.org/)
