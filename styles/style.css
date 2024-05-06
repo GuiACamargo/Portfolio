@@ -741,6 +741,8 @@ Sandbox
 .sandbox__projects-item-img {
     border-radius: 3px;
     opacity: 0.8;
+    filter: blur(1px);
+
 }
 
 .sandbox__projects-item-content {

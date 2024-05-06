@@ -1,20 +1,7 @@
-import { loadBasic } from '@tsparticles/basic';
 import { confetti } from '@tsparticles/confetti';
-import { tsParticles } from '@tsparticles/engine';
-import { loadExternalRepulseInteraction } from '@tsparticles/interaction-external-repulse';
-import { loadParticlesLinksInteraction } from '@tsparticles/interaction-particles-links';
-import { loadParticlesRepulseInteraction } from '@tsparticles/interaction-particles-repulse';
-import { loadParallaxMover } from '@tsparticles/move-parallax';
-import { loadEasingCubicPlugin } from '@tsparticles/plugin-easing-cubic';
 
-const buttonSidebar = document.querySelector('.header__menu-sidebar-button');
-const sidebar = document.querySelector('.header__menu--sidebar');
-const allIconBars = document.querySelectorAll('.header__menu-icon-bar');
-const overlay = document.querySelector('.overlay');
 const buttonCallToActionIntroduction = document.querySelector('.introduction__button-call-to-action');
 const buttonCallToActionAboutMe = document.querySelector('.about-me__button-call-to-action');
-const allSidebarAnchorButton = document.querySelectorAll('.header__menu-anchor--sidebar');
-const toast = document.querySelector('.toast');
 
 const confettiButton = document.querySelector('#confetti-button');
 const starButton = document.querySelector('#star-button');
@@ -22,34 +9,6 @@ const heartButton = document.querySelector('#heart-button');
 const fireworkButton = document.querySelector('#firework-button');
 const snowButton = document.querySelector('#snow-button');
 const brazilButton = document.querySelector('#brazil-button');
-
-let isSidebarOpen = false;
-
-function openSidebar() {
-    overlay.style.display = 'block';
-    sidebar.classList.add('header__menu--sidebar-animation');
-    allIconBars[0].classList.add('header__menu-icon-bar--animation-first');
-    allIconBars[1].classList.add('header__menu-icon-bar--animation-second');
-    allIconBars[2].classList.add('header__menu-icon-bar--animation-third');
-}
-
-function closeSidebar() {
-    overlay.style.display = 'none';
-    sidebar.classList.remove('header__menu--sidebar-animation');
-    allIconBars[0].classList.remove('header__menu-icon-bar--animation-first');
-    allIconBars[1].classList.remove('header__menu-icon-bar--animation-second');
-    allIconBars[2].classList.remove('header__menu-icon-bar--animation-third');
-}
-
-function sidebarAction(isOpen) {
-    isSidebarOpen = !isOpen;
-
-    if (isSidebarOpen) {
-        openSidebar();
-    } else {
-        closeSidebar();
-    }
-}
 
 async function launchConfetti(count, spread, positionX, positionY) {
     await confetti({
@@ -71,32 +30,12 @@ function launchConfettiFromButton(eventX, eventY) {
     launchConfetti(60, 60, xValue, yValue);
 }
 
-allSidebarAnchorButton.forEach((anchor) => {
-    anchor.addEventListener('click', () => {
-        if (isSidebarOpen) {
-            isSidebarOpen = !isSidebarOpen;
-            closeSidebar();
-        }
-    });
-});
-
 buttonCallToActionIntroduction.addEventListener('click', (event) => {
     launchConfettiFromButton(event.x, event.y);
 });
 
 buttonCallToActionAboutMe.addEventListener('click', (event) => {
     launchConfettiFromButton(event.x, event.y);
-});
-
-buttonSidebar.addEventListener('click', () => {
-    sidebarAction(isSidebarOpen);
-});
-
-overlay.addEventListener('click', () => {
-    if (isSidebarOpen) {
-        isSidebarOpen = !isSidebarOpen;
-        closeSidebar();
-    }
 });
 
 confettiButton.addEventListener('click', (event) => {
@@ -247,7 +186,6 @@ snowButton.addEventListener('click', () => {
 brazilButton.addEventListener('click', () => {
     const end = Date.now() + 3 * 1000;
 
-    // go Buckeyes!
     const colors = ['#1d8733', '#3188b9', '#E2ce29'];
 
     (function frame() {
@@ -272,27 +210,3 @@ brazilButton.addEventListener('click', () => {
         }
     })();
 });
-
-window.addEventListener('DOMContentLoaded', () => {
-});
-
-async function loadParticles() {
-    loadBasic(tsParticles);
-    loadEasingCubicPlugin(tsParticles);
-    loadExternalRepulseInteraction(tsParticles);
-    loadParticlesRepulseInteraction(tsParticles);
-    loadParticlesLinksInteraction(tsParticles);
-    loadParallaxMover(tsParticles);
-    await launchConfetti(0, 0, 0, 0);
-    await tsParticles
-        .load({
-            id: 'tsparticles',
-            url: '/presets/default.json',
-        })
-        .then(() => {
-            toast.classList.remove('toast--animation');
-        })
-        .catch((error) => console.log(error));
-}
-
-loadParticles();
