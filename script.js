@@ -62,13 +62,13 @@ async function launchConfetti(count, spread, positionX, positionY) {
     });
 }
 
-async function launchConfettiFromButton(eventX, eventY) {
+function launchConfettiFromButton(eventX, eventY) {
     const widthView = window.innerWidth;
     const heightView = window.innerHeight;
     const xValue = (eventX / widthView) * 100;
     const yValue = (eventY / heightView) * 100;
 
-    await launchConfetti(60, 60, xValue, yValue);
+    launchConfetti(60, 60, xValue, yValue);
 }
 
 allSidebarAnchorButton.forEach((anchor) => {
@@ -99,8 +99,8 @@ overlay.addEventListener('click', () => {
     }
 });
 
-confettiButton.addEventListener('click', async (event) => {
-    await launchConfettiFromButton(event.x, event.y);
+confettiButton.addEventListener('click', (event) => {
+    launchConfettiFromButton(event.x, event.y);
 });
 
 starButton.addEventListener('click', () => {
@@ -273,8 +273,7 @@ brazilButton.addEventListener('click', () => {
     })();
 });
 
-window.addEventListener('DOMContentLoaded', async () => {
-    await launchConfetti(0, 0, 0, 0);
+window.addEventListener('DOMContentLoaded', () => {
 });
 
 async function loadParticles() {
@@ -284,7 +283,7 @@ async function loadParticles() {
     loadParticlesRepulseInteraction(tsParticles);
     loadParticlesLinksInteraction(tsParticles);
     loadParallaxMover(tsParticles);
-
+    await launchConfetti(0, 0, 0, 0);
     await tsParticles
         .load({
             id: 'tsparticles',
