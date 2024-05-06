@@ -51,8 +51,8 @@ function sidebarAction(isOpen) {
     }
 }
 
-function launchConfetti(count, spread, positionX, positionY) {
-    confetti({
+async function launchConfetti(count, spread, positionX, positionY) {
+    await confetti({
         count: count,
         spread: spread,
         position: {
@@ -62,13 +62,13 @@ function launchConfetti(count, spread, positionX, positionY) {
     });
 }
 
-function launchConfettiFromButton(eventX, eventY) {
+async function launchConfettiFromButton(eventX, eventY) {
     const widthView = window.innerWidth;
     const heightView = window.innerHeight;
     const xValue = (eventX / widthView) * 100;
     const yValue = (eventY / heightView) * 100;
 
-    launchConfetti(60, 60, xValue, yValue);
+    await launchConfetti(60, 60, xValue, yValue);
 }
 
 allSidebarAnchorButton.forEach((anchor) => {
@@ -99,8 +99,8 @@ overlay.addEventListener('click', () => {
     }
 });
 
-confettiButton.addEventListener('click', (event) => {
-    launchConfettiFromButton(event.x, event.y);
+confettiButton.addEventListener('click', async (event) => {
+    await launchConfettiFromButton(event.x, event.y);
 });
 
 starButton.addEventListener('click', () => {
@@ -273,8 +273,8 @@ brazilButton.addEventListener('click', () => {
     })();
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-    launchConfetti(0, 0, 200, 100);
+window.addEventListener('DOMContentLoaded', async () => {
+    await launchConfetti(0, 0, 0, 0);
 });
 
 async function loadParticles() {
