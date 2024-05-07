@@ -294,6 +294,18 @@ Introduction
     justify-content: center;
     align-items: center;
     margin-top: var(--header-height);
+    background-color: var(--color700);
+}
+
+.introduction-mobile {
+    background-image: linear-gradient(
+        to right bottom, 
+        var(--color700), 
+        var(--color700), 
+        var(--color600), 
+        var(--color500), 
+        var(--color400)
+    );
 }
 
 #tsparticles {
@@ -304,6 +316,10 @@ Introduction
     right: 0;
     padding: 0;
     margin: 0;
+}
+
+.tsparticles-mobile {
+    display: none;
 }
 
 .introduction__container {
