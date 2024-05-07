@@ -23,9 +23,6 @@ function isTouchDevice() {
     const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const isSmallScreen = window.innerWidth < screenSize || screen.width < screenSize;
 
-    console.log(isTouch);
-    console.log(isSmallScreen);
-
     return isTouch && isSmallScreen;
 }
 
