@@ -8,6 +8,7 @@
     <script type="module" src="src/button-confetti.js" defer></script>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" type="image/x-icon" href="icons/code.svg">
     <title>Portfolio - Gui Camargo</title>
     <meta name="description" content="Guilherme Camargo is a Full-Stack Developer with real international project experience, see more about it!">
@@ -107,7 +108,7 @@
                     <p class="about-me__description">Here you will find more about me, my skills, and some other cool things :)</p>
                 </div>
                 <div class="about-me__about-skills-container">
-                    <div class="about-me__about">
+                    <div class="about-me__about" data-aos="fade-right">
                         <h3 class="about-me__about-title">Who am I?</h3>
                         <p class="about-me__about-description">
                             Hey! I'm Guilherme Camargo, a Full-Stack web developer that loves to create interactive, robust and clean web applications.
@@ -123,7 +124,7 @@
                         </p>
                         <a href="#contact" class="about-me__button-call-to-action">Contact me!</a>
                     </div>
-                    <div class="about-me__skills">
+                    <div class="about-me__skills" data-aos="fade-left" data-aos-delay="300">
                         <h3 class="about-me__skills-title">Some of my skills!</h3>
                         <div class="about-me__skills-itens-container">
                             <ul class="about-me__skills-itens-ul">
@@ -153,7 +154,7 @@
             <div class="experience-education__container">
                 <div class="experience-education__wrapper">
                     <div class="experience-education__group">
-                        <div class="experience-education__title-wrapper">
+                        <div class="experience-education__title-wrapper" data-aos="fade-right" data-aos-delay="100">
                             <img class="experience-education__icon experience-education__icon--mtop" src="icons/work.svg" alt="Work Icon">
                             <h2 class="experience-education__title">Experience & Work</h2>
                         </div>
@@ -207,7 +208,7 @@
                     </div>
                     <div class="experience-education__divider"></div>
                     <div class="experience-education__group">
-                        <div class="experience-education__title-wrapper">
+                        <div class="experience-education__title-wrapper" data-aos="fade-right" data-aos-delay="100" data-aos-anchor=".experience-education__title-wrapper">
                             <img class="experience-education__icon experience-education__icon--mtop" src="icons/education.svg" alt="Education Icon">
                             <h2 class="experience-education__title">Education</h2>
                         </div>
@@ -219,8 +220,8 @@
                         </ul>
                     </div>
                 </div>
-                <canvas class="experience__three-js"></canvas>
-                <h4 class="experience__three-js-title">Grab it! :)</h4>
+                <canvas class="experience__three-js" data-aos="fade-left" data-aos-delay="500"></canvas>
+                <h4 class="experience__three-js-title" data-aos="fade-left" data-aos-delay="500">Grab it! :)</h4>
             </div>
         </section>
         <section class="sandbox" id="sandbox">
@@ -233,7 +234,7 @@
                 <div class="sandbox__projects-container">
                     <div class="sandbox__projects-list-container">
                         <ul class="sandbox__projects-list">
-                            <li class="sandbox__projects-item">
+                            <li class="sandbox__projects-item" data-aos="zoom-in" data-aos-duration="600">
                                 <img class="sandbox__projects-item-img" loading="lazy" src="images/galaxyGenerator.webp" alt="Galaxy Generator project">
                                 <div class="sandbox__projects-item-content">
                                     <div class="sandbox__projects-item-text">
@@ -249,7 +250,7 @@
                                     <a class="sandbox__projects-item-button" href="https://galaxy-generator-particles.vercel.app/" rel="noopener noreferrer" target="_blank">Take a look!</a>
                                 </div>
                             </li>
-                            <li class="sandbox__projects-item">
+                            <li class="sandbox__projects-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
                                 <img class="sandbox__projects-item-img" loading="lazy" src="images/3DPropertiesSimulator.webp" alt="3D Properties Simulator project">
                                 <div class="sandbox__projects-item-content">
                                     <div class="sandbox__projects-item-text">
@@ -276,7 +277,7 @@
             <div class="contact__container">
                 <div class="contact__list-container">
                     <h2 class="contact__list-title">Send me a message!</h2>
-                    <ul class="contact__list-ul">
+                    <ul class="contact__list-ul" data-aos="fade-right">
                         <li class="contact__list-item">
                             <a class="contact__list-item-anchor" href="https://www.linkedin.com/in/guilhermecamargodev/" target="_blank" rel="noopener noreferrer">
                                 <img class="contact__list-item-logo" src="icons/linkedin-logo.svg" alt="Linkedin logo">
@@ -345,5 +346,6 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>

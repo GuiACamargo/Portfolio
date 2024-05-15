@@ -16,6 +16,13 @@ const allSidebarAnchorButton = document.querySelectorAll('.header__menu-anchor--
 const toast = document.querySelector('.toast');
 const tsparticlesDiv = document.querySelector('#tsparticles');
 
+AOS.init({
+    easing: 'ease',
+    // once: true,
+    duration: 700,
+    // mirror: true,
+})
+
 let isSidebarOpen = false;
 
 function isTouchDevice() {
