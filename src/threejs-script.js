@@ -14,6 +14,7 @@ threeJSCanvas.addEventListener('mouseup', () => {
 
 const scene = new THREE.Scene()
 scene.background = new THREE.Color("#3C096C")
+// scene.background = new THREE.Color("#240046")
 
 const gltfLoader = new GLTFLoader()
 
@@ -57,6 +58,7 @@ media.addEventListener('change', () => {
 
 window.addEventListener('resize', () =>
 {
+    resizeCanvas(media)
     if(isMatchingMedia){
         threeJSCanvas.style.width = "60%"
         threeJSCanvas.style.height = "30vh"
