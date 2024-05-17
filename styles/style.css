@@ -34,6 +34,16 @@ body {
     background-color: var(--black);
 }
 
+::-moz-selection {
+    color: var(--color100);
+    background: #10002bda;
+}
+  
+::selection {
+    color: var(--color100);
+    background: #10002bda;
+}
+
 /*
 Header
 */
